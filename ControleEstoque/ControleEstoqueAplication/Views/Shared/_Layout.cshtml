@@ -1,7 +1,9 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Controle de Estoque</title>
@@ -21,10 +23,63 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="#">Cadastro</a></li>
-                    <li><a href="#">Operações</a></li>
-                    <li><a href="#">Relatórios</a></li>
-                    <li><a href="#">Gráficos</a></li>
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Cadastro
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Produtos", "Produto", "Cadastro")</li>
+                            <li>@Html.ActionLink("Grupo de produtos", "GrupoProduto", "Cadastro")</li>
+                            <li>@Html.ActionLink("Marcas de Produtos", "MarcaProduto", "Cadastro")</li>
+                            <li>@Html.ActionLink("Locais de Armazenamento", "LocalProduto", "Cadastro")</li>
+                            <li>@Html.ActionLink("Unidades de medidas", "UnidadeMedida", "Cadastro")</li>
+                            <li class="nav-divider"></li>
+                            <li>@Html.ActionLink("Países", "Pais", "Cadastro")</li>
+                            <li>@Html.ActionLink("Estados", "Estado", "Cadastro")</li>
+                            <li>@Html.ActionLink("Cidades", "Cidade", "Cadastro")</li>
+                            <li>@Html.ActionLink("Fornecedores", "Fornecedore", "Cadastro")</li>
+                            <li class="nav-divider"></li>
+                            <li>@Html.ActionLink("Usuários", "Usuario", "Cadastro")</li>
+                            <li>@Html.ActionLink("Perfis de Usuários", "PerfilUsuario", "Cadastro")</li>
+
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Operações
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Entrada de produtos", "EntradaEstoque", "Operacao")</li>
+                            <li>@Html.ActionLink("Saidas de produtos", "SaidaEstoque", "Operacao")</li>
+                            <li>@Html.ActionLink("Lançamentos de produtos", "LancPerdaProduto", "Operacao")</li>
+                            <li>@Html.ActionLink("Inventário de estoque", "Inventario", "Operacao")</li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Relatórios
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Posição de Estoque", "PosicaoEstoque", "Relatorio")</li>
+                            <li>@Html.ActionLink("Pedido de Compras", "Pcompras", "Relatorio")</li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Gráficos
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Perdas por mês", "Perdas", "Grafico")</li>
+                            <li>@Html.ActionLink("Entradas e Saídas por mês", "EntradasSaidaMes", "Grafico")</li>
+                        </ul>
+                    </li>
                 </ul>
 
 

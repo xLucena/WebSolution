@@ -1,0 +1,44 @@
+﻿@model ControleEstoqueAplication.Models.LoginViewModel
+@{
+    ViewBag.Title = "Login";
+}
+
+<div class="container" id="cContainer">
+    <div class="row">
+        <h3 class="titulo">Login do sistema</h3>
+    </div>
+    <div class="row">
+        <section id="loginform">
+            @using (Html.BeginForm("Login", "ContaUsuario", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Usuario, new { @class = "form-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.PasswordFor(m => m.Usuario, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Senha, new { @class = "form-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.PasswordFor(m => m.Senha, new { @class = "form-control" })
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="col-md-10 col-md-offset-2">
+                        @Html.CheckBoxFor(m => m.LembrarMe)
+                        @Html.LabelFor(m => m.LembrarMe)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-10 col-md-offset-2">
+                        <input type="submit" class="btn btn-success" value="Entrar" />
+                    </div>
+                </div>
+
+            }
+        </section>
+    </div>
+</div>
+

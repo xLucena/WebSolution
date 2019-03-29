@@ -6,15 +6,15 @@ using System.Web.Mvc;
 
 namespace ControleEstoqueAplication.Controllers
 {
-    public class HomeController : Controller
+    public class RelatorioController : Controller
     {
         [Authorize]
-        public ActionResult Index()
+        public ActionResult PosicaoEstoque()
         {
             return View();
         }
         [Authorize]
-        public ActionResult Sobre()
+        public ActionResult Pcompras()
         {
             return View();
         }

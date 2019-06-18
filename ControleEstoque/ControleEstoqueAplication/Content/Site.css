@@ -36,3 +36,9 @@ textarea {
     text-align: center;
   
 }
+.invisivel{
+    display:none;
+}
+#buttons{
+    background-color:aqua;
+}

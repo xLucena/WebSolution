@@ -29,6 +29,7 @@
                                 Cadastro
                                 <span class="caret"></span>
                             </a>
+
                             <ul class="dropdown-menu">
                                 <li>@Html.ActionLink("Produtos", "Produto", "Cadastro")</li>
                                 <li>@Html.ActionLink("Grupo de produtos", "GrupoProduto", "Cadastro")</li>
@@ -93,20 +94,19 @@
 
                             <li><a href="javascript:document.getElementById('logoffForm').submit()">Sair</a></li>
 
-                     
+
                         </ul>
-                               }
                     }
-                                    else
-                                    {
-                                        <ul class="nav navbar-nav navbar-right">
-                                            <li>@Html.ActionLink("Login", "Login", "ContaUsuario")</li>
-                                        </ul>
-                                    }
-                    </div>
+                }
+                else
+                {
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>@Html.ActionLink("Login", "Login", "ContaUsuario")</li>
+                    </ul>
+                }
+            </div>
 
         </div>
-
 
     </div>
 
@@ -118,8 +118,6 @@
             <p>&copy; @DateTime.Now.Year - Controle de estoque</p>
         </footer>
     </div>
-
-
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

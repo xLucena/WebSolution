@@ -8,6 +8,7 @@ namespace ControleEstoqueAplication.Models
 {
     public class LoginViewModel
     {
+        //Atributos NAME->Escrito o formulario USUARIO, incluiu os atributos nome,senha e lembrar me, utilizando o
         [Required(ErrorMessage ="Informe seu usuário")]
         [Display(Name ="Usuário: ")]
         public string Usuario { get; set; }

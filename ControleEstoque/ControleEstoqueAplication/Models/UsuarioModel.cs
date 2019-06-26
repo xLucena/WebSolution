@@ -17,10 +17,10 @@ namespace ControleEstoqueAplication.Models
 
                 //Criando a conexao, informando o banco com a string de conexao
                 //Conexao string serve pra realizar a conexao com banco de dados, para acessa-lo, usuario e senha
-
+                //foi passado o nome do banco, o login, e a senha do BD
                 conexao.ConnectionString = @"Data Source = DESKTOP-TMOPBME\LUCENA;Initial Catalog=controle-estoque;User Id=admin;Password=123";
                 conexao.Open();
-                //criando um comando SQlcomamnd
+                //criando um comando SQlcomamnd para realizar um comando em sql
                 using (var comando = new SqlCommand())
                 {
                     //Associando a conexao e colocando o comando que vai buscar do banco, usuario dentro do sistema, pra entrar na tela de login
